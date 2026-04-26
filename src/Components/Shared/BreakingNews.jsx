@@ -21,7 +21,7 @@ const BreakingNews = () => {
 ]
 
   return (
-    <div className="flex bg-gray-200 py-2 px-3 mt-3 container mx-auto">
+    <div className="flex bg-gray-200 md:py-2 md:px-3 p-1 mt-3 container mx-auto">
         <button className="btn bg-red-500 text-white ">Latest News</button>
       <Marquee pauseOnHover>
       {
