@@ -1,15 +1,12 @@
-'use client'
-
 import Image from "next/image";
 import Link from "next/link";
 import user from "@/assets/user.png"
-import { usePathname } from "next/navigation";
 
 
 
-const Navbar = ({href}) => {
-    const pathname = usePathname();
-const isActive = href === pathname;
+
+const Navbar = () => {
+   
 
     return (
         <div className="flex items-center container justify-between mx-auto mt-4">
@@ -21,7 +18,7 @@ const isActive = href === pathname;
             </div>
             <div className="flex items-center gap-2">
                 <Image src={user} alt="user"/>
-               <Link href={"/login"}><button className="btn bg-black text-white">Login</button></Link>
+               <Link href={"/login"}><button className="btn bg-gray-800 text-white">Login</button></Link>
             </div>
             
             
