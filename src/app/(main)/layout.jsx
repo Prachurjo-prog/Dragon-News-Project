@@ -4,11 +4,6 @@ import Navbar from '@/Components/Shared/Navbar';
 
 
 
-
-
-
-
-
 const MainLayout = ({children, id, }) => {
     return (
         <div>

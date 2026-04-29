@@ -5,6 +5,7 @@ import save from "@/assets/save.png";
 import Image from "next/image";
 import { BsShare } from "react-icons/bs";
 import Link from "next/link";
+
 const getAllNews = async (category_id) => {
   const res = await fetch(
     `https://openapi.programming-hero.com/api/news/category/${category_id}`,
@@ -62,9 +63,10 @@ const AllNews = async ({ id }) => {
                 </p>
                 <div>
                   <Link href={`/news/${n._id}`}>
-                  <button className="text-orange-400 hover:underline hover:cursor-pointer text-md font-medium btn btn-ghost">Read More</button>
+                    <button className="text-orange-400 hover:underline hover:cursor-pointer text-md font-medium btn btn-ghost">
+                      Read More
+                    </button>
                   </Link>
-                  
                 </div>
 
                 {/* <hr className="text-gray-300" /> */}
