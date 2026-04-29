@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import save from "@/assets/save.png";
 import Image from "next/image";
 import { BsShare } from "react-icons/bs";
+import Link from "next/link";
 const getAllNews = async (category_id) => {
   const res = await fetch(
     `https://openapi.programming-hero.com/api/news/category/${category_id}`,
@@ -54,12 +55,19 @@ const AllNews = async ({ id }) => {
                   alt="banner"
                   className="w-full"
                   width={300}
-                  height={200}
+                  height={300}
                 />
-                <p className="pt-5 pb-2.5 text-lg font-bold text-gray-600">
+                <p className="pt-5 pb-2.5 text-lg font-bold text-gray-600 truncate">
                   {n.details}
                 </p>
-                <hr className="text-gray-300" />
+                <div>
+                  <Link href={`/news/${n._id}`}>
+                  <button className="text-orange-400 hover:underline hover:cursor-pointer text-md font-medium btn btn-ghost">Read More</button>
+                  </Link>
+                  
+                </div>
+
+                {/* <hr className="text-gray-300" /> */}
                 <div className="flex items-center justify-between pt-4">
                   <p className="flex items-center gap-2">
                     <FaStar className="text-orange-300" />

@@ -2,7 +2,7 @@
 
 const CareerPage = () => {
     return (
-        <div>
+        <div className="mx-auto container">
             CareerPage
         </div>
     );
