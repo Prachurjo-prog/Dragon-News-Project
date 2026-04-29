@@ -8,16 +8,16 @@ const getCatagories = async () => {
   return data.data;
 };
 
-const AllCatagories = async () => {
+const AllCatagories = async ({activeId}) => {
   const catagories = await getCatagories();
-  // console.log(catagories.news_category);
+  
   return (
     <div>
       <h2 className="text-2xl font-bold">All Catagories</h2>
       <ul className="mt-6 flex flex-col text-center font-medium text-gray-600">
         {catagories.news_category.map((catagory) => (
           <li
-            className="text-lg font-bold btn btn-ghost"
+            className={`${activeId === catagory.category_id && "text-red-500 bg-gray-200" } text-lg font-bold btn btn-ghost`}
             key={catagory.category_id}
           >
             <Link
@@ -26,6 +26,7 @@ const AllCatagories = async () => {
             >
               {catagory.category_name}
             </Link>
+
           </li>
         ))}
       </ul>

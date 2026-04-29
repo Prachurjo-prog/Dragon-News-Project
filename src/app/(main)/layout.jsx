@@ -9,7 +9,7 @@ import Navbar from '@/Components/Shared/Navbar';
 
 
 
-const MainLayout = ({children}) => {
+const MainLayout = ({children, id, }) => {
     return (
         <div>
             <Header/>
